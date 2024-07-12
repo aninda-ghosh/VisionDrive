@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1] - 2024-07-12
+
+### Updated
+
+- Updated readme with the latest demo runs.
+
 ## [0.1.0] - 2024-07-11
 
 ### Added

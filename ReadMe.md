@@ -72,28 +72,21 @@ This project aims to build a Tesla-like vision system and navigation stack for m
     ./CarlaUE4.sh -prefernvidia
     ```
   
-  - Launch the Ego Vehicle
+  - Load the environment, change the `TownXX` part
   
     ```bash
-    cd carla-simulator
-    ./CarlaUE4.sh -prefernvidia
+    ros2 launch carla_ros_bridge carla_ros_bridge.launch.py synchronous_mode:=True town:=Town01 timeout:=200
     ```
-  
+
   - Launch the Ego Vehicle
   
     ```bash
     ros2 launch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch.py
     ```
   
-  - Change and load the environment, change the `TownXX` part
-  
-    ```bash
-    ros2 launch carla_ros_bridge carla_ros_bridge.launch.py synchronous_mode:=True town:=Town03 timeout:=200
-    ```
-  
   - Use the provided `objects.json` and `carla_ros.rviz` to spawn the objects and see the output from the Ego Vehicles perspective.
   
     ```bash
-    ros2 launch carla_ros_bridge ros2 launch carla_spawn_objects carla_example_ego_vehicle.launch.py spawn_sensors_only:=False objects_definition_file:=objects.json
+    ros2 launch carla_spawn_objects carla_example_ego_vehicle.launch.py spawn_sensors_only:=False objects_definition_file:=objects.json
     rviz2 -d carla_ros.rviz
     ```
